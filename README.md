@@ -14,7 +14,7 @@ Projeto realizado utilizando a linguagem python e majoritariamente a bibliotca c
 3.1 Navegar até a pasta projeto e executar o comando python main.py. Processo também pode ser executado através do comando de execução do vscode(ou outra ide).
 
 3.2 Para a realização de testes, basta acessar o diretório 'projeto' e executar o comando 'pytest'
-## 4. Bibliotecas utilizdas
+## 4. Bibliotecas utilizadas
 
 4.1 customtkinter - É uma biblioteca python que facilita na criação de interfaces gráficas. Segue o link da documentação - https://customtkinter.tomschimansky.com/documentation/
 
@@ -44,11 +44,12 @@ A estrutura do projeto se baseia em requisições HTTP através de uma API dispo
 Esse enpoint disponibiliza um menu onde se pode escolher entre real e dollar e, ao se acionar o botão de conversão, é realizada uma requisição para API que devolve o valor da conversão atual das moedas escolhidas
 
 6.3 histórico de conversões
-![historico_conversao](https://github.com/user-attachments/assets/d5b1d2dc-c3f0-40e5-8c82-71f9ae710c1b)
+![historico_cotacoes_correto](https://github.com/user-attachments/assets/246c98c7-3321-42b9-833a-0944b75e77c1)
 Esse endpoint trás as conversões através da escolha de datas pelos usuários fazendo uma requisição http para a API que responde com 5 cotações entre as datas escolhidas
 
 6.4 Obtendo a última taxa
-![ultima_taxa](https://github.com/user-attachments/assets/62f505ba-96ec-4135-9c81-a92d9cb5186b)
+![image](https://github.com/user-attachments/assets/ff708153-4916-4a8e-b6b3-aeee4b5c7f72)
+
 esse endpoint carrega a última cotação ao se acionar o botão na interface
 
 ## 7. Considerações finais
