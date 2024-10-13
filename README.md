@@ -30,6 +30,8 @@ Navegar at√© a pasta projeto e executar o comando python main.py. Processo tamb√
 
 ## 5. Diagrama de estrutura
 
+![diagrama_conversor](https://github.com/user-attachments/assets/6005f7f7-b1a7-47a6-933e-4ee1700060b2)
+
 
 
 
