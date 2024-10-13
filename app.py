@@ -1,6 +1,6 @@
 import customtkinter
 from tkcalendar import DateEntry
-from funcoes_buscar_cotacoes import pegar_cotacao_moeda, conversoes_disponiveis, buscar_ultima_cotacao, buscar_cotacoes_por_data
+from funcoes_buscar_cotacoes import pegar_cotacao_moeda, conversoes_disponiveis, buscar_ultima_cotacao, buscar_cotacoes_por_data, salvar_cotacao
 
 janela = customtkinter.CTk()
 janela.geometry("1000x800") 
@@ -35,8 +35,8 @@ def converter_moeda():
         cotacao = pegar_cotacao_moeda(moeda_origem, moeda_destino)
         
         texto_cotacao_moeda.configure(
-            text=f"1 {moeda_origem} = {cotacao} {moeda_destino}"
-        )
+            text=f"1 {moeda_origem} = {cotacao} {moeda_destino}")
+        salvar_cotacao(float(cotacao), "conversão")
     else:
         texto_cotacao_moeda.configure(text="Preencha ambos os campos.")
 
@@ -93,6 +93,7 @@ def mostrar_ultima_cotacao():
     cotacao = buscar_ultima_cotacao()
     if cotacao:
         ultima_cotacao.configure(text=f"Cotação de 1 USD para BRL: {cotacao}")
+        salvar_cotacao(float(cotacao), "ult_tx_cotada")
     else:
         ultima_cotacao.configure(text="Cotação não encontrada")
 

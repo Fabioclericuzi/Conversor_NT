@@ -1,5 +1,6 @@
 import requests
 import xmltodict
+import mysql.connector
 
 def pegar_cotacao_moeda(moeda_origem, moeda_destino):
     link = f"http://economia.awesomeapi.com.br/json/last/{moeda_origem}-{moeda_destino}"
@@ -51,6 +52,53 @@ def buscar_cotacoes_por_data(data_inicio, data_final):
         return resposta.json()  
     else:
         return None
+    
+    
+def conectar_mysql():
+    conexao = mysql.connector.connect(
+        host="localhost",
+        user="root",  
+        password="nautico#20",  
+        database="cotacoes"   
+    )
+    return conexao
+
+def salvar_cotacao(valor, tipo):
+    conexao = conectar_mysql()
+    cursor = conexao.cursor()
+
+    query = "INSERT INTO cotacoes (valor, tipo) VALUES (%s, %s)"
+    valores = (valor, tipo)
+
+    cursor.execute(query, valores)
+    conexao.commit()
+
+    cursor.close()
+    conexao.close()
+
+def criar_tabela():
+    conexao = conectar_mysql()
+    cursor = conexao.cursor()
+
+    query = """
+    CREATE TABLE IF NOT EXISTS cotacoes (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        valor DECIMAL(10, 5),
+        data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        tipo VARCHAR(50)
+    );
+    """
+    cursor.execute(query)
+    conexao.commit()
+
+    cursor.close()
+    conexao.close()
+
+criar_tabela()
+
+
+
+
 
 
 
