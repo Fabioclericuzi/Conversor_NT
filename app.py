@@ -69,7 +69,7 @@ def buscar_e_mostrar_cotacoes():
     cotacoes = buscar_cotacoes_por_data(data_inicio, data_final)
 
     if cotacoes and isinstance(cotacoes, list):
-        texto_resultado = "Últimas Cotações (USD para BRL):\n"
+        texto_resultado = "Últimas Cotações (BRL para USD):\n"
         for cotacao in cotacoes:
             data = cotacao.get("create_date", "Data não disponível")
             valor = cotacao.get("bid", "Valor não disponível")
@@ -92,7 +92,7 @@ txt_ultima_taxa.pack(padx=10, pady=10)
 def mostrar_ultima_cotacao():
     cotacao = buscar_ultima_cotacao()
     if cotacao:
-        ultima_cotacao.configure(text=f"Cotação de 1 USD para BRL: {cotacao}")
+        ultima_cotacao.configure(text=f"Cotação de 1 BRL para USD: {cotacao}")
         salvar_cotacao(float(cotacao), "ult_tx_cotada")
     else:
         ultima_cotacao.configure(text="Cotação não encontrada")

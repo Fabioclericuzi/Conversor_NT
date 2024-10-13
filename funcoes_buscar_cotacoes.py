@@ -28,22 +28,21 @@ def conversoes_disponiveis():
 import requests
 
 def buscar_ultima_cotacao():
-    url = "http://economia.awesomeapi.com.br/json/last/USD-BRL"
+    url = "http://economia.awesomeapi.com.br/json/last/BRL-USD"
     resposta = requests.get(url)
 
     if resposta.status_code == 200:
         dados = resposta.json()
-        cotacao = dados["USDBRL"]["bid"]
+        cotacao = dados["BRLUSD"]["bid"]
         return cotacao
     else:
         print(f"Erro na requisição: {resposta.status_code}")
         return None
     
-import requests
 
 def buscar_cotacoes_por_data(data_inicio, data_final):
     url = (
-        f"https://economia.awesomeapi.com.br/json/daily/USD-BRL/5"
+        f"https://economia.awesomeapi.com.br/json/daily/BRL-USD/5"
         f"?start_date={data_inicio.replace('-', '')}&end_date={data_final.replace('-', '')}"
     )
 
