@@ -69,7 +69,7 @@ def buscar_e_mostrar_cotacoes():
     cotacoes = buscar_cotacoes_por_data(data_inicio, data_final)
 
     if cotacoes:
-        texto_resultado = "Últimas Cotações (BRL para USD):\n"
+        texto_resultado = "Cotação por data (BRL para USD):\n"
         for cotacao in cotacoes:
             data = cotacao.get("data", "Data não disponível")  
             valor = cotacao.get("bid", "Valor não disponível")
@@ -98,7 +98,7 @@ def mostrar_ultima_cotacao():
     else:
         ultima_cotacao.configure(text="Cotação não encontrada")
 
-botao_obter_ult_taxa = customtkinter.CTkButton(janela, text="Última taxa", command=mostrar_ultima_cotacao)
+botao_obter_ult_taxa = customtkinter.CTkButton(janela, text="Última taxa cotada", command=mostrar_ultima_cotacao)
 botao_obter_ult_taxa.pack(padx=10, pady=10, expand=True)
 
 ultima_cotacao = customtkinter.CTkLabel(janela, text="", font=("", 12))
