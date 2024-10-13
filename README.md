@@ -44,7 +44,7 @@ A estrutura do projeto se baseia em requisições HTTP através de uma API dispo
 Esse enpoint disponibiliza um menu onde se pode escolher entre real e dollar e, ao se acionar o botão de conversão, é realizada uma requisição para API que devolve o valor da conversão atual das moedas escolhidas
 
 6.3 histórico de conversões
-![historico_conversao](https://github.com/user-attachments/assets/d5b1d2dc-c3f0-40e5-8c82-71f9ae710c1b)
+![historico_cotacoes_correto](https://github.com/user-attachments/assets/246c98c7-3321-42b9-833a-0944b75e77c1)
 Esse endpoint trás as conversões através da escolha de datas pelos usuários fazendo uma requisição http para a API que responde com 5 cotações entre as datas escolhidas
 
 6.4 Obtendo a última taxa
