@@ -32,6 +32,5 @@ Navegar até a pasta projeto e executar o comando python main.py. Processo tamb�
 
 ![diagrama_conversor](https://github.com/user-attachments/assets/6005f7f7-b1a7-47a6-933e-4ee1700060b2)
 
-
-
+A estrutura do projeto se baseia em requisições HTTP através de uma API disponibilizada pelo site https://docs.awesomeapi.com.br/api-de-moedas#formato-de-resposta que fornece cotações atualizadas para moedas do mundo todo. Como mostra o diagrama, o usuário utiliza uma interface gráfica onde ele pode solicitar uma simples conversão de dollar para real e de real para dollar, existe também a possibilidade de buscar um histórico de cotações através das datas escolhidas e, por fim, a interface disponibiliza um botão que vai trazer a última cotação realizada. O sistema faz um intermédio entre o usuário e a API e guarda as informações num banco mysql. 
 
