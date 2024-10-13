@@ -22,5 +22,14 @@ Navegar até a pasta projeto e executar o comando python main.py. Processo tamb�
 
 4.3 unittest.mock - Utilizada para a realização de testes unitários. Segue link da documentação - https://docs.python.org/3/library/unittest.mock.html
 
+4.4 requests - biblioteca utilizada para requisições HTTP e facilita a interação com API's. Link da documentação - https://pypi.org/project/requests/
+
+4.5 xmltodict  - realiza a conversão de arquivos XML para dicionários python. Segue linke da documentação - https://pypi.org/project/xmltodict/
+
+4.6 mysql.connector - fornece interface para conexão e interação com o banco de dados Mysql. Segue link da documentação - https://pypi.org/project/mysql-connector-python/
+
+## 5. Diagrama de estrutura
+
+
 
 
