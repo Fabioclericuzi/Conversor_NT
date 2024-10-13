@@ -34,3 +34,22 @@ Navegar até a pasta projeto e executar o comando python main.py. Processo tamb�
 
 A estrutura do projeto se baseia em requisições HTTP através de uma API disponibilizada pelo site https://docs.awesomeapi.com.br/api-de-moedas#formato-de-resposta que fornece cotações atualizadas para moedas do mundo todo. Como mostra o diagrama, o usuário utiliza uma interface gráfica onde ele pode solicitar uma simples conversão de dollar para real e de real para dollar, existe também a possibilidade de buscar um histórico de cotações através das datas escolhidas e, por fim, a interface disponibiliza um botão que vai trazer a última cotação realizada. O sistema faz um intermédio entre o usuário e a API e guarda as informações num banco mysql. 
 
+## 6. Prints do projeto em funcionamento
+6.1 Banco de dados recebendo as informações
+![mysql_conversoes](https://github.com/user-attachments/assets/5fd776dc-cb0d-433a-bfb5-2d532e377c41)
+
+6.2 tela inicial do projeto
+![tela_inicial](https://github.com/user-attachments/assets/b2663433-5fa8-4b79-8336-4a02622b75ca)
+
+6.3 usando o botão de conversão
+![conversao_1](https://github.com/user-attachments/assets/3b869c87-cdb9-46b4-abb2-16216096034e)
+
+6.4 histórico de conversões
+![historico_conversao](https://github.com/user-attachments/assets/d5b1d2dc-c3f0-40e5-8c82-71f9ae710c1b)
+
+6.5 Obtendo a última taxa
+![ultima_taxa](https://github.com/user-attachments/assets/62f505ba-96ec-4135-9c81-a92d9cb5186b)
+
+## 7. Considerações finais
+Essa documentação da uma visão geral do projeto e seu funcionamento. Junto com ela, será enviado um vídeo por e-mail mostrando a utilização do programa em funcionamento.
+
