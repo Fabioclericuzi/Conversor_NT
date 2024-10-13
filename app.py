@@ -63,21 +63,22 @@ campo_data_final = DateEntry(janela, date_pattern='yyyy-mm-dd')
 campo_data_final.pack(padx=10, pady=10)
 
 def buscar_e_mostrar_cotacoes():
-    data_inicio = campo_data_inicio.get_date().strftime('%Y-%m-%d')
-    data_final = campo_data_final.get_date().strftime('%Y-%m-%d')
+    data_inicio = campo_data_inicio.get_date().strftime('%Y%m%d')  
+    data_final = campo_data_final.get_date().strftime('%Y%m%d') 
 
     cotacoes = buscar_cotacoes_por_data(data_inicio, data_final)
 
-    if cotacoes and isinstance(cotacoes, list):
+    if cotacoes:
         texto_resultado = "Últimas Cotações (BRL para USD):\n"
         for cotacao in cotacoes:
-            data = cotacao.get("create_date", "Data não disponível")
+            data = cotacao.get("data", "Data não disponível")  
             valor = cotacao.get("bid", "Valor não disponível")
             texto_resultado += f"{data}: {valor}\n"
     else:
         texto_resultado = "Nenhuma cotação encontrada no período ou erro na resposta da API."
 
     texto_cotacoes.configure(text=texto_resultado)
+
 
 
 botao_buscar_por_data = customtkinter.CTkButton(janela, text="Buscar cotações", command=buscar_e_mostrar_cotacoes)

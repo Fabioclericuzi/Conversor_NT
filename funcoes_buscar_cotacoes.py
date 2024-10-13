@@ -1,6 +1,7 @@
 import requests
 import xmltodict
 import mysql.connector
+from datetime import datetime
 
 def pegar_cotacao_moeda(moeda_origem, moeda_destino):
     link = f"http://economia.awesomeapi.com.br/json/last/{moeda_origem}-{moeda_destino}"
@@ -48,10 +49,23 @@ def buscar_cotacoes_por_data(data_inicio, data_final):
 
     resposta = requests.get(url)
     if resposta.status_code == 200:
-        return resposta.json()  
+        cotacoes = resposta.json()
+        return formatar_cotacoes(cotacoes)
     else:
-        return None
-    
+        print(f"Erro ao buscar cotações: {resposta.status_code}")
+        return []
+
+def formatar_cotacoes(cotacoes):
+    lista_formatada = []
+
+    for cotacao in cotacoes:
+        timestamp = int(cotacao["timestamp"])
+        data = datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+        lista_formatada.append({"data": data, "bid": cotacao.get("bid")})
+
+    return lista_formatada
+
+
     
 def conectar_mysql():
     conexao = mysql.connector.connect(
