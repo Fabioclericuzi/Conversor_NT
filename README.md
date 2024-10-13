@@ -48,7 +48,8 @@ Esse enpoint disponibiliza um menu onde se pode escolher entre real e dollar e, 
 Esse endpoint trás as conversões através da escolha de datas pelos usuários fazendo uma requisição http para a API que responde com 5 cotações entre as datas escolhidas
 
 6.4 Obtendo a última taxa
-![ultima_taxa](https://github.com/user-attachments/assets/62f505ba-96ec-4135-9c81-a92d9cb5186b)
+![image](https://github.com/user-attachments/assets/ff708153-4916-4a8e-b6b3-aeee4b5c7f72)
+
 esse endpoint carrega a última cotação ao se acionar o botão na interface
 
 ## 7. Considerações finais
