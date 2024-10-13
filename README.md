@@ -11,9 +11,9 @@ Projeto realizado utilizando a linguagem python e majoritariamente a bibliotca c
 2.3 Banco de Dados: Contém o MySQL, responsável pelo armazenamento de dados.
 
 ## 3. Como executar o projeto
+3.1 Navegar até a pasta projeto e executar o comando python main.py. Processo também pode ser executado através do comando de execução do vscode(ou outra ide).
 
-Navegar até a pasta projeto e executar o comando python main.py. Processo também pode ser executado através do comando de execução do vscode(ou outra ide).
-
+3.2 Para a realização de testes, basta acessar o diretório 'projeto' e executar o comando 'pytest'
 ## 4. Bibliotecas utilizdas
 
 4.1 customtkinter - É uma biblioteca python que facilita na criação de interfaces gráficas. Segue o link da documentação - https://customtkinter.tomschimansky.com/documentation/
