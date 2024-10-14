@@ -26,7 +26,6 @@ def conversoes_disponiveis():
             dic_conversoes_disponiveis[moeda_origem] = [moeda_destino]
     return dic_conversoes_disponiveis   
 
-import requests
 
 def buscar_ultima_cotacao():
     url = "http://economia.awesomeapi.com.br/json/last/BRL-USD"

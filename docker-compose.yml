@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app 
+    depends_on:
+      - db
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=nautico#20
+      - MYSQL_DATABASE=cotacoes
+    ports:
+      - "8000:8000"
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cotacoes
+      MYSQL_USER: root
+      MYSQL_PASSWORD: nautico#20
+      MYSQL_INITDB_SKIP_TZINFO: 1
+    command: --innodb-force-recovery=1
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql 
+
+volumes:
+  db_data: 
