@@ -11,7 +11,7 @@ Projeto realizado utilizando a linguagem python e majoritariamente a bibliotca c
 2.3 Banco de Dados: Contém o MySQL, responsável pelo armazenamento de dados.
 
 ## 3. Como executar o projeto
-3.1 Navegar até a pasta projeto e executar o comando python main.py. Processo também pode ser executado através do comando de execução do vscode(ou outra ide).
+3.1 Para rodar o projeto é necessário instalar as dependências com o comando 'pip install -r requirements.txt', criar o schema mysql rodando o comando 'CREATE DATABASE cotacoes', alterar os dados de conexão com seus dados na função conectar_mysql do arquivo funcoes_buscar_cotacoes e rodar o comando 'python app.py' no terminal dentro da pasta projeto.
 
 3.2 Para a realização de testes, basta acessar o diretório 'projeto' e executar o comando 'pytest'
 ## 4. Bibliotecas utilizadas
