@@ -71,9 +71,11 @@ def buscar_e_mostrar_cotacoes():
     if cotacoes:
         texto_resultado = "Cotação por data (BRL para USD):\n"
         for cotacao in cotacoes:
-            data = cotacao.get("data", "Data não disponível")  
-            valor = cotacao.get("bid", "Valor não disponível")
+            data = cotacao["data"]
+            valor = cotacao["bid"]
             texto_resultado += f"{data}: {valor}\n"
+
+            salvar_cotacao(float(valor), "cotacao_data")
     else:
         texto_resultado = "Nenhuma cotação encontrada no período ou erro na resposta da API."
 
